@@ -4,8 +4,6 @@ Repositorio dedicado a la materia **Arquitectura de Computadoras** (UTN), enfoca
 
 El lenguaje ensamblador convierte código simbólico en **código máquina**, permitiendo un control completo sobre la CPU, memoria y dispositivos de Entrada/Salida (E/S). Programar en ensamblador es **imperativo y orientado a la arquitectura**, dando al programador control total sobre el flujo de ejecución.
 
----
-
 ## 1. Arquitectura CISC y Microprogramación del 8086
 
 El procesador **Intel 8086/8088** pertenece a la arquitectura **CISC (Complex Instruction Set Computer)**.
@@ -22,8 +20,6 @@ El procesador **Intel 8086/8088** pertenece a la arquitectura **CISC (Complex In
 - **Microcódigo:** Secuencia de microoperaciones que ejecuta instrucciones complejas.  
 - **Ubicación:** Almacenado en ROM interna del procesador.  
 - **Eficiencia:** Determina la cantidad de operaciones necesarias por instrucción, afectando la velocidad de ejecución.  
-
----
 
 ## 2. Estructura Interna del Procesador
 
@@ -43,8 +39,6 @@ El 8086 coordina sus funciones mediante tres unidades esenciales:
 4. Captación y cálculo del operando (OAC/OF)  
 5. Ejecución de la operación sobre los datos (DO)  
 6. Almacenamiento del resultado (Operand Store)  
-
----
 
 ## 3. Registros Internos y Gestión de Memoria
 
@@ -127,8 +121,6 @@ En el 8086, las direcciones y valores suelen expresarse en hexadecimal para simp
 6. **Relativo a Índice:** Registro índice + desplazamiento  
 7. **Indexado a la Base:** Registro base + índice + desplazamiento  
 
----
-
 ## 4. Juego de Instrucciones
 
 ### Manipulación de Datos
@@ -143,8 +135,6 @@ En el 8086, las direcciones y valores suelen expresarse en hexadecimal para simp
 - **Saltos incondicionales:** JMP  
 - **Saltos condicionales:** Jnnn  
 - **Bucles:** LOOP (usa CX como contador)  
-
----
 
 ## 5. Administración de Entrada/Salida (E/S) e Interrupciones
 
@@ -164,8 +154,6 @@ En el 8086, las direcciones y valores suelen expresarse en hexadecimal para simp
 2. **Por interrupciones:** CPU responde solo cuando el dispositivo lo solicita  
 3. **DMA (Acceso Directo a Memoria):** Transferencia directa entre periférico y memoria, liberando la CPU  
 
----
-
 ## 6. Entorno de Ejecución y Sistemas Operativos
 
 - El ensamblador se ejecuta generalmente sobre un **sistema operativo**, como MS-DOS.  
@@ -173,9 +161,20 @@ En el 8086, las direcciones y valores suelen expresarse en hexadecimal para simp
 - **Proceso:** Programa en ejecución con registros y variables activas.  
 - **Gestión de memoria:** Asigna espacio lógico a cada proceso y protege la memoria de accesos indebidos.  
 
----
-
 ## 7. Segmentación y Direccionamiento
 
 - Cada segmento de memoria: 64 KB  
 - Direcciones físicas se calculan combinando **Segmento + Offset**
+
+## 8. Ejecución en EMU8086
+
+Para ejecutar programas en **EMU8086**, sigue estos pasos:
+
+1. **Instalar EMU8086:** Descarga e instala desde [emu8086.com](https://www.filehorse.com/es/download-emu8086-microprocessor-emulator/).  
+2. **Crear un nuevo proyecto:** Abre EMU8086 y selecciona “New Project”.  
+3. **Escribir el código:** Escribe o pega tu código en el editor del proyecto.  
+4. **Compilar:** Haz clic en el botón de **Compile** para convertir el código ensamblador en código máquina.  
+5. **Ejecutar:** Presiona **Run** para iniciar la ejecución del programa dentro del emulador.  
+6. **Depurar:** Utiliza las opciones de depuración, como **Step Into**, **Step Over** o **Breakpoints**, para analizar el flujo de ejecución y los valores de registros y memoria.  
+
+Con EMU8086 puedes simular la ejecución del procesador 8086, monitorear registros, manipular la memoria y visualizar el comportamiento de instrucciones de ensamblador en tiempo real.
